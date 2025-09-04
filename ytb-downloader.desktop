@@ -2,5 +2,5 @@
 Version=1.0
 Type=Application
 Terminal=false
-Exec=/home/mike/python/qt/ytb_gui/start.sh
+Exec=PATH/start.sh
 Name=Youtube Downloader
