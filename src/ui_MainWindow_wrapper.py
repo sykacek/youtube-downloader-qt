@@ -82,14 +82,6 @@ class Ui_MainWindow_wrapper(Ui_MainWindow):
 			else:
 				print("downloading a song")
 
-				cmd = ["cd", self.path, "&&", "yt-dlp", "--extract-audio", "--audio-format", "mp3", "--no-playlist", link]
-				print(cmd)
-
-				p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-				data,stderr  = p.communicate()
-				print(data, stderr)
-
-				"""
 				cmd = "cd " + self.path + " && yt-dlp --extract-audio --audio-format mp3 --no-playlist " + link
 				print(cmd)
 
@@ -100,7 +92,6 @@ class Ui_MainWindow_wrapper(Ui_MainWindow):
 
 				except Exception as e:
 					self.logText = "FAILED!!!\n" + str(e)
-				"""
 
 		self.urls = []
 		self.logText = "Finished\n"
